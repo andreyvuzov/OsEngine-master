@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OsEngine.Indicators
 {
-    internal class Class1
+    internal class KalmanFilter
     {
     }
 }

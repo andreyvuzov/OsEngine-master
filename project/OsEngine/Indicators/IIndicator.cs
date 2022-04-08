@@ -107,7 +107,7 @@ namespace OsEngine.Indicators
         /// Обновить значения индикатора
         /// </summary>
         void Process(List<Candle> candles);
-
+        decimal GetValue(List<Candle> candles, int index);
     }
 
     /// <summary>

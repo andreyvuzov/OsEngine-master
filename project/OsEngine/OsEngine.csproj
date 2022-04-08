@@ -387,10 +387,10 @@
     <Compile Include="Indicators\AIndicatorUi.xaml.cs">
       <DependentUpon>AIndicatorUi.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Indicators\KalmanFilter.cs" />
     <Compile Include="Indicators\Entity.cs" />
     <Compile Include="Indicators\IndicatorParameter.cs" />
     <Compile Include="Indicators\IndicatorsFactory.cs" />
+    <Compile Include="Indicators\KalmanFilter.cs" />
     <Compile Include="Indicators\ScriptSpells.cs" />
     <Compile Include="Journal\Internal\PositionController.cs" />
     <Compile Include="Journal\JournalUi.xaml.cs">

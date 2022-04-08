@@ -94,9 +94,6 @@ namespace OsEngine.Robots
                 // ignore
             }
         }
-        
-
-
         public NewRobot5(string name, StartProgram startProgram) : base(name, startProgram)
         {
             Stop = 300;//данные в шагах цены
@@ -1527,7 +1524,9 @@ namespace OsEngine.Robots
         public decimal TekGo;
         public decimal volume;
         public double Vgo;
-        public decimal depo;        
+        public decimal depo;
+
+        //public Spf _spf;
         public PairBot2(string name, StartProgram startProgram) : base(name, startProgram)
         {
             Load();
@@ -1536,6 +1535,14 @@ namespace OsEngine.Robots
             TabCreate(BotTabType.Simple);
             TabCreate(BotTabType.Simple);
             TabCreate(BotTabType.Simple);
+
+            //_moving = new MovingAverage("moving1", false);
+            //_moving = (MovingAverage)TabsSimple[0].CreateCandleIndicator(_moving, "Prime");
+            //_moving.Save();
+            //_spf = new Spf("_spf", false);
+            //_spf = (Spf)TabsSimple[0].CreateCandleIndicator(_spf, "Prime");
+            //_spf.Save();
+
 
             TabsSimple[0].CandleFinishedEvent += PairBot2_first_sec_CandleFinishedEvent;//секунды первая нога
             TabsSimple[1].CandleFinishedEvent += PairBot2_second_sec_CandleFinishedEvent;//вторая нога секунда
@@ -1798,7 +1805,7 @@ namespace OsEngine.Robots
                 ma_long = Ma1_long - Ma2_long * v2;
                 volume = Math.Round(depo * Convert.ToDecimal(Vgo) / TekGo);
             }
-
+            
             if (candles.Count > n_short && only_short == true)
             {
                 TradeLogic_short();
