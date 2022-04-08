@@ -49,7 +49,7 @@ namespace OsEngine.Robots
         public int Profit;//профит
         public int Sleepage;
         public int Volume;
-        public bool IsOn;
+        public bool IsOn;   // OnOff
         public void Save()
         {
             try
