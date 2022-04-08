@@ -45,8 +45,8 @@ namespace OsEngine.Robots
 {
     public class NewRobot5 : BotPanel
     {
-        public int Stop;//стоп
-        public int Profit;
+        public int Stop;
+        public int Profit;//профит
         public int Sleepage;
         public int Volume;
         public bool IsOn;
