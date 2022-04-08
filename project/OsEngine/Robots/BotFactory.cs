@@ -1525,8 +1525,7 @@ namespace OsEngine.Robots
         public decimal volume;
         public double Vgo;
         public decimal depo;
-
-        //public Spf _spf;
+                
         public PairBot2(string name, StartProgram startProgram) : base(name, startProgram)
         {
             Load();
@@ -1769,6 +1768,7 @@ namespace OsEngine.Robots
         {
             c2_sec = candles[candles.Count - 1].Close;
         }
+
 
         private void PairBot2_first_sec_CandleFinishedEvent(List<Candle> candles)
         {
